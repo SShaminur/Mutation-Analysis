@@ -2,14 +2,17 @@
 
 
 # Details_pipeline
+Mutation_analysis.pdf
 
-
-This simple python program helps in mutation analysis with respect to the reference genome. Courtesy of straight_line_fasta.pl http://www.bioinformatics-made-simple.com
+# Output
+This simple python program helps in mutation analysis with respect to the reference genome. Output will be 
+Strain_ID Reference_aa:aa_position:strain_aa
 
 Usages: ./pairwise_mutation.py input_align.fasta > Output.txt
 
 
 
 # Reference
+Courtesy of straight_line_fasta.pl http://www.bioinformatics-made-simple.com
 
 Rahman, M. S., Islam, M. R., Hoque, M. N., Alam, A. R. U., Akther, M., Puspo, J. A., ... & Hossain, M. A. (2020). Comprehensive annotations of the mutational spectra of SARS-CoV-2 spike protein: a fast and accurate pipeline. bioRxiv.
