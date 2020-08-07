@@ -1,0 +1,69 @@
+
+setwd("C:/Users/SHAKIL/Desktop/trackViewer Vignette/1_Final_lolopop_data")
+library(Gviz)
+library(rtracklayer)
+library(trackViewer)
+
+SNP <- c(5,8,18,21,29,49,54,73,80,95,98,102,138,146,214,215,367,439,477,478,479,483,572,583,614,675,681,769,791,829,831,839,845,846,847,879,936,943,1020,1073,1078,1121,1124,1162,1176,1219,1237,1263)
+
+Name <- c("F5L",	"L8V/W",	"L18F",	"R21I/T/K",	"T29I/A",	"H49Y",	"L54F",	"T73I",	"D80N/Y/A",	"T95I/N",	"S98F",	"R102S/I/G",	"D138H/Y",	"H146Q/N/YR",	"R214L",	"D215Y/H/G/N",	"Y367F",	"N439K",	"S477/I/N/R/G",	"T478I",	"P479S/L",	"V483F/I/A",	"T572I",	"E583D/Q",	"D614G/N",	"Q675H/R/K",	"P681H/L/S",	"G769V/A",	"T791I/P/A/K",	"A829T",	"A831S/V/T",	"D839Y/E/N",	"A845S/V/D",	"A846S/V",	"R847T/I/K",	"A879S/V/T",	"D936Y/H",	"S943P/I",	"A1020V/S",	"K1073/N",	"A1078S/V",	"F1121L",	"G1124V",	"P1162L/T/A/S",	"V1176F",	"G1219C/V",	"M1237T/I",	"P1263L/T")
+
+
+sample.gr <- GRanges("chr1", IRanges(SNP, width=1, names=paste0(Name)))
+features <- GRanges("chr1", IRanges(c(1, 685, 687,61, 138, 241, 238, 675), 
+                                    width=c(684, 2, 587, 16, 8, 4, 293, 5),
+                                    names=paste0("N", 1:8)))
+
+features$fill <- c("blue", "#51C6E6", "#DFA32D", "#800000", "#800000", "#800000", "#00FF00", "#800000")
+
+sample.gr$color <- rep(list(c("red")), length(SNP), replace=TRUE)
+
+features$height <- c(0.02, 0.04, 0.02, 0.02, 0.02, 0.02, 0.04, 0.02)
+
+frq <- c(238,39,58,256,43,61,85,33,30,32,32,35,29,41,33,55,27,41,43,57,50,31,33,33,500,89,27,48,25,90,35,161,42,44,87,88,360,28,41,51,28,65,31,28,44,46,34,252)
+
+sample.gr$score <- frq
+
+pdffile <- "rong3.pdf";
+pdf(pdffile, 6, 6);
+par(mar=c(2, 2, 2, 2));
+
+lolliplot(sample.gr, features, cex=.5)
+
+
+dev.off()
+
+############################Final_run2######################################
+setwd("C:/Users/SHAKIL/Desktop/trackViewer Vignette/1_Final_lolopop_data")
+library(Gviz)
+library(rtracklayer)
+library(trackViewer)
+
+SNP <- c(5,8,18,21,29,49,54,73,80,95,98,102,138,146,214,215,367,439,477,478,479,483,572,583,614,675,681,769,791,829,831,839,845,846,847,879,936,943,1020,1073,1078,1121,1124,1162,1176,1219,1237,1263)
+
+Name <- c("F5L",	"L8V/W",	"L18F",	"R21I/T/K",	"T29I/A",	"H49Y",	"L54F",	"T73I",	"D80N/Y/A",	"T95I/N",	"S98F",	"R102S/I/G",	"D138H/Y",	"H146Q/N/YR",	"R214L",	"D215Y/H/G/N",	"Y367F",	"N439K",	"S477/I/N/R/G",	"T478I",	"P479S/L",	"V483F/I/A",	"T572I",	"E583D/Q",	"D614G/N",	"Q675H/R/K",	"P681H/L/S",	"G769V/A",	"T791I/P/A/K",	"A829T",	"A831S/V/T",	"D839Y/E/N",	"A845S/V/D",	"A846S/V",	"R847T/I/K",	"A879S/V/T",	"D936Y/H",	"S943P/I",	"A1020V/S",	"K1073/N",	"A1078S/V",	"F1121L",	"G1124V",	"P1162L/T/A/S",	"V1176F",	"G1219C/V",	"M1237T/I",	"P1263L/T")
+
+
+sample.gr <- GRanges("chr1", IRanges(SNP, width=1, names=paste0(Name)))
+features <- GRanges("chr1", IRanges(c(1, 685, 687,61, 138, 241, 238, 675), 
+                                    width=c(684, 2, 587, 16, 8, 4, 293, 5),
+                                    names=paste0("N", 1:8)))
+
+features$fill <- c("blue", "#51C6E6", "#DFA32D", "#800000", "#800000", "#800000", "#00FF00", "#800000")
+
+sample.gr$color <- rep(list(c("red")), length(SNP), replace=TRUE)
+
+features$height <- c(0.02, 0.04, 0.02, 0.03, 0.03, 0.03, 0.04, 0.03)
+
+frq <- c(238,39,58,256,43,61,85,33,30,32,32,35,29,41,33,55,27,41,43,57,50,31,33,33,500,89,27,48,25,90,35,161,42,44,87,88,360,28,41,51,28,65,31,28,44,46,34,252)
+
+sample.gr$score <- frq
+
+pdffile <- "Final3.3.pdf";
+pdf(pdffile, 6, 6);
+par(mar=c(2, 2, 2, 2));
+
+lolliplot(sample.gr, features, cex=.6)
+
+
+dev.off()
