@@ -1,4 +1,4 @@
-# Nonsynonimous Mutation-Analysis
+# Synonimous & Nonsynonimous Mutation-Analysis Pipeline for Large dataset
 This is the fast and accurate pipeline by which the protein mutation can be detected with a short possible time of a large number of sequences. By using separate multi-sequence alignment with MAFFT, removing ambiguous sequences and in-frame stop codons, and utilizing pairwise alignment, this method can derive nonsynonymus mutations (Reference:Position:Strain)
 
 # Details_pipeline
