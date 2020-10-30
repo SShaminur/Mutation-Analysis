@@ -6,7 +6,7 @@ This is the fast and accurate pipeline by which the protein mutation can be dete
 2. Biopython 1.75 or higher
 
 # Detail_Pipeline
-Mutation_analysis.pdf
+https://github.com/SShaminur/Mutation-Analysis/blob/master/Mutation_analysis.pdf
 
 # Output
 This simple python program helps in mutation analysis with respect to the reference genome. Output will be 
