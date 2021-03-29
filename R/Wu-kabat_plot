@@ -1,4 +1,4 @@
-setwd("C:/Users/SHAKIL/Desktop/trackViewer Vignette/bar_plot")
+setwd("C:/Users/user_name/Desktop/trackViewer Vignette/bar_plot")
 library(ggplot2)
 
 df = read.csv("bar_plot.csv", header = TRUE)
