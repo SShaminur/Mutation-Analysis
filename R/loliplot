@@ -1,7 +1,5 @@
 
-setwd("C:/Users/SHAKIL/Desktop/trackViewer Vignette/1_Final_lolopop_data")
-library(Gviz)
-library(rtracklayer)
+setwd("C:/Users/user_name/Desktop/trackViewer Vignette/1_Final_lolopop_data")
 library(trackViewer)
 
 SNP <- c(5,8,18,21,29,49,54,73,80,95,98,102,138,146,214,215,367,439,477,478,479,483,572,583,614,675,681,769,791,829,831,839,845,846,847,879,936,943,1020,1073,1078,1121,1124,1162,1176,1219,1237,1263)
