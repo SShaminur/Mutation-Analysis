@@ -5,12 +5,12 @@ library(trackViewer)
 SNP <- c(5,8,18,21,29,49,54,73,80,95,98,102,138,146,214,215,367,439,477,478,479,483,572,583,614,675,681,769,791,829,831,839,845,846,847,879,936,943,1020,1073,1078,1121,1124,1162,1176,1219,1237,1263)
 
 Name <- c("F5L",	"L8V/W",	"L18F",	"R21I/T/K",	"T29I/A",	"H49Y",	"L54F",	"T73I",	"D80N/Y/A",	"T95I/N",	"S98F",	"R102S/I/G",	"D138H/Y",	"H146Q/N/YR",	"R214L",	"D215Y/H/G/N",	"Y367F",	"N439K",	"S477/I/N/R/G",	"T478I",	"P479S/L",	"V483F/I/A",	"T572I",	"E583D/Q",	"D614G/N",	"Q675H/R/K",	"P681H/L/S",	"G769V/A",	"T791I/P/A/K",	"A829T",	"A831S/V/T",	"D839Y/E/N",	"A845S/V/D",	"A846S/V",	"R847T/I/K",	"A879S/V/T",	"D936Y/H",	"S943P/I",	"A1020V/S",	"K1073/N",	"A1078S/V",	"F1121L",	"G1124V",	"P1162L/T/A/S",	"V1176F",	"G1219C/V",	"M1237T/I",	"P1263L/T")
-
+Name2 <- c("S1", "Furine cleavage site", "S2", "Deletion", "Deletion", "Deletion", "RBD", "Deletion")
 
 sample.gr <- GRanges("chr1", IRanges(SNP, width=1, names=paste0(Name)))
 features <- GRanges("chr1", IRanges(c(1, 685, 687,61, 138, 241, 238, 675), 
                                     width=c(684, 2, 587, 16, 8, 4, 293, 5),
-                                    names=paste0("N", 1:8)))
+                                    names=paste0(Name2)))
 
 features$fill <- c("blue", "#51C6E6", "#DFA32D", "#800000", "#800000", "#800000", "#00FF00", "#800000")
 
@@ -32,9 +32,7 @@ lolliplot(sample.gr, features, cex=.5)
 dev.off()
 
 ############################Final_run2######################################
-setwd("C:/Users/SHAKIL/Desktop/trackViewer Vignette/1_Final_lolopop_data")
-library(Gviz)
-library(rtracklayer)
+setwd("C:/Users/username/Desktop/trackViewer Vignette/1_Final_lolopop_data")
 library(trackViewer)
 
 SNP <- c(5,8,18,21,29,49,54,73,80,95,98,102,138,146,214,215,367,439,477,478,479,483,572,583,614,675,681,769,791,829,831,839,845,846,847,879,936,943,1020,1073,1078,1121,1124,1162,1176,1219,1237,1263)
