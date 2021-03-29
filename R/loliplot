@@ -13,10 +13,8 @@ features <- GRanges("chr1", IRanges(c(1, 685, 687,61, 138, 241, 238, 675),
                                     names=paste0(Name2)))
 
 features$fill <- c("blue", "#51C6E6", "#DFA32D", "#800000", "#800000", "#800000", "#00FF00", "#800000")
-
-sample.gr$color <- rep(list(c("red")), length(SNP), replace=TRUE)
-
 features$height <- c(0.02, 0.04, 0.02, 0.02, 0.02, 0.02, 0.04, 0.02)
+sample.gr$color <- rep(list(c("red")), length(SNP), replace=TRUE)
 
 frq <- c(238,39,58,256,43,61,85,33,30,32,32,35,29,41,33,55,27,41,43,57,50,31,33,33,500,89,27,48,25,90,35,161,42,44,87,88,360,28,41,51,28,65,31,28,44,46,34,252)
 
